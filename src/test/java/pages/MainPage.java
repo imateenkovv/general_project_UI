@@ -1,9 +1,10 @@
 package pages;
 
+import com.codeborne.selenide.Condition;
 import com.codeborne.selenide.SelenideElement;
 
-import static com.codeborne.selenide.Selenide.$;
-import static com.codeborne.selenide.Selenide.$x;
+import static com.codeborne.selenide.Selenide.*;
+import static com.codeborne.selenide.WebDriverConditions.url;
 
 /**
  * @author mateenkov
@@ -12,6 +13,8 @@ import static com.codeborne.selenide.Selenide.$x;
 public class MainPage {
 
     private final SelenideElement inputSearch = $("[type='search']");
+    private final SelenideElement changeLanguageButton = $("[id='language_pulldown']");
+    private final SelenideElement buttonDownloadSteam = $("[class='header_installsteam_btn_content']");
 
     public MainPage searchItem(String value) {
         inputSearch.setValue(value);
@@ -19,8 +22,24 @@ public class MainPage {
         return this;
     }
 
-    public MainPage openFoundItem(String nameGame) {
-        $x("//div/span[text() = '" + nameGame + "']").click();
+    public MainPage openPage(String url) {
+        open(url);
+        webdriver().shouldHave(url(url));
+        return this;
+    }
+
+    public MainPage openChangeLanguage() {
+        changeLanguageButton.click();
+        return this;
+    }
+
+    public MainPage setLanguage(String language) {
+        $x("//a[contains(text(),'" + language + "')]").click();
+        return this;
+    }
+
+    public MainPage checkChangeLanguage(String expectedResult){
+        buttonDownloadSteam.shouldHave(Condition.text(expectedResult));
         return this;
     }
 
