@@ -4,6 +4,7 @@ import com.codeborne.selenide.Condition;
 import com.codeborne.selenide.SelenideElement;
 
 import static com.codeborne.selenide.Selenide.$;
+import static com.codeborne.selenide.Selenide.$x;
 
 /**
  * @author mateenkov
@@ -16,6 +17,10 @@ public class CartPage {
     private final SelenideElement counterItemInCart = $("[id='cart_item_count_value']");
     private final SelenideElement buttonPurchaseSelf = $("[id='btn_purchase_self']");
     private final SelenideElement buttonPurchaseGift = $("[id='btn_purchase_gift']");
+    private final SelenideElement linkRemoveSingleItem = $x("//div/a[text() = 'Удалить']");
+    private final SelenideElement cartStatusMessage = $("[class='cart_status_message']");
+    private final SelenideElement price = $("[class='price']");
+
     public CartPage checkNameGame(String nameGame){
         titleNameGame.shouldHave(Condition.text(nameGame));
         return this;
@@ -39,4 +44,18 @@ public class CartPage {
         return this;
     }
 
+    public CartPage removeSingleItemFromCart(){
+        linkRemoveSingleItem.click();
+        return this;
+    }
+
+    public CartPage checkStatusCartRemoveItem(String message){
+        cartStatusMessage.shouldHave(Condition.text(message));
+        return this;
+    }
+
+    public CartPage checkPriceAnEmptyCart(String value){
+        price.shouldHave(Condition.text(value));
+        return this;
+    }
 }

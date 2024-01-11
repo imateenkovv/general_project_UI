@@ -12,24 +12,24 @@ import static helpers.Constants.*;
  * @author mateenkov
  */
 
-public class AddItemToCartTest {
+public class RemoveItemFromCart {
     MainPage mainPage = new MainPage();
     GamePage gamePage = new GamePage();
     CartPage cartPage = new CartPage();
-    private static final String NAME_GAME = "Firewatch";
+    private final static String NAME_GAME = "Detroit: Become Human";
+
 
     @Test
-    void addItemToCartTest() {
+    void removeItemFromCartTest() {
         open(BASE_URL);
 
         mainPage.searchItem(NAME_GAME)
                 .openFoundItem(NAME_GAME);
-        gamePage.checkNameGame(NAME_GAME)
-                .addGameToCart();
-        cartPage.checkTitleCartPage(TITLE_PLACEHOLDER_CART)
-                .checkCounterItemInCart(COUNT_ONE_IN_CART)
-                .checkNameGame(NAME_GAME)
-                .checkEnableButtonsPurchase();
+        gamePage.addGameToCart();
+        cartPage.removeSingleItemFromCart()
+                .checkStatusCartRemoveItem(MESSAGE_REMOVE_SINGLE_ITEM)
+                .checkPriceAnEmptyCart(AMOUNT_EMPTY_CART);
 
     }
+
 }
