@@ -5,9 +5,9 @@ import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 import pages.MainPage;
 import pages.SearchResultPage;
+import utils.FakerUtils;
 
 import static helpers.Constants.BASE_URL;
-import static utils.FakerUtils.getGameName;
 
 /**
  * @author mateenkov
@@ -16,7 +16,8 @@ import static utils.FakerUtils.getGameName;
 public class SearchFieldTest extends BaseLocalTest {
     MainPage mainPage = new MainPage();
     SearchResultPage searchResultPage = new SearchResultPage();
-    private final static String GAME = getGameName();
+    static FakerUtils faker = new FakerUtils();
+    private final static String GAME = faker.getGameName();
 
     @Test
     @DisplayName("Проверка поисковой  выдачи в Steam")

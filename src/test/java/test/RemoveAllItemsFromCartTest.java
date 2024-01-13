@@ -7,9 +7,9 @@ import pages.CartPage;
 import pages.GamePage;
 import pages.MainPage;
 import pages.SearchResultPage;
+import utils.FakerUtils;
 
 import static helpers.Constants.*;
-import static utils.FakerUtils.getGameName;
 
 /**
  * @author mateenkov
@@ -20,8 +20,9 @@ public class RemoveAllItemsFromCartTest extends BaseLocalTest {
     SearchResultPage searchResultPage = new SearchResultPage();
     GamePage gamePage = new GamePage();
     CartPage cartPage = new CartPage();
-    private static final String NAME_GAME_ONE = getGameName();
-    private static final String NAME_GAME_TWO = getGameName();
+    static FakerUtils faker = new FakerUtils();
+    private static final String NAME_GAME_ONE = faker.getGameName();
+    private static final String NAME_GAME_TWO = faker.getGameName();
 
     @Test
     @DisplayName("Удаление сразу всех игр из корзины")

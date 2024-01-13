@@ -1,33 +1,36 @@
 package utils;
 
+import com.codeborne.selenide.Condition;
 import com.github.javafaker.Faker;
 
 import java.util.Locale;
+
+import static com.codeborne.selenide.Selenide.$;
+import static helpers.Constants.*;
 
 /**
  * @author mateenkov
  */
 
 public class FakerUtils {
-    public static Faker faker = new Faker(Locale.US);
+    Faker faker = new Faker(Locale.US);
+    private static final String[] GAME_NAME_ARG = {
+            FIREWATCH,
+            DETROIT,
+            CS
+    };
 
-    private static final String[] GAME_NAME_ARG ={
-            "Firewatch",
-            "Detroit: Become Human",
-            "Counter-Strike: Source"
-    } ;
-
-    private static final String[] LOGIN_NAME_FRIEND ={
+    private static final String[] LOGIN_NAME_FRIEND = {
             "mateenkov93",
             "SuslikStas496",
             "tolkachev88"
-    } ;
+    };
 
-    public static String getGameName(){
+    public String getGameName() {
         return faker.options().option(GAME_NAME_ARG);
     }
 
-    public static String getLoginNameFriends(){
+    public String getLoginNameFriends() {
         return faker.options().option(LOGIN_NAME_FRIEND);
     }
 

@@ -15,6 +15,7 @@ public class GamePage {
 
     private final ElementsCollection buttonAddToCart = $$x("//span[text() = 'В корзину']");
     private final SelenideElement titleNameGame = $("[id='appHubAppName']");
+    private static final SelenideElement descriptionGame = $("[class='game_description_snippet']");
 
     public GamePage addGameToCart(){
         buttonAddToCart.first().click();
@@ -23,6 +24,11 @@ public class GamePage {
 
     public GamePage checkNameGame(String nameGame){
         titleNameGame.shouldHave(Condition.text(nameGame));
+        return this;
+    }
+
+    public GamePage checkDescription(String description){
+        descriptionGame.shouldHave(Condition.text(description));
         return this;
     }
 

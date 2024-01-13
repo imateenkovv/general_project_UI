@@ -7,10 +7,10 @@ import pages.CartPage;
 import pages.GamePage;
 import pages.MainPage;
 import pages.SearchResultPage;
+import utils.FakerUtils;
 
 import static com.codeborne.selenide.Selenide.open;
 import static helpers.Constants.*;
-import static utils.FakerUtils.getGameName;
 
 /**
  * @author mateenkov
@@ -21,7 +21,8 @@ public class RemoveItemFromCart extends BaseLocalTest {
     SearchResultPage searchResultPage = new SearchResultPage();
     GamePage gamePage = new GamePage();
     CartPage cartPage = new CartPage();
-    private final static String NAME_GAME = getGameName();
+    static FakerUtils faker = new FakerUtils();
+    private final static String NAME_GAME = faker.getGameName();
 
 
     @Test
