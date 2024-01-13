@@ -9,7 +9,7 @@ import java.util.Locale;
  */
 
 public class FakerUtils {
-    static Faker faker = new Faker(Locale.US);
+    public static Faker faker = new Faker(Locale.US);
 
     private static final String[] GAME_NAME_ARG ={
             "Firewatch",

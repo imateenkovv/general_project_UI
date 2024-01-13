@@ -18,8 +18,11 @@ public class CartPage {
     private final SelenideElement buttonPurchaseSelf = $("[id='btn_purchase_self']");
     private final SelenideElement buttonPurchaseGift = $("[id='btn_purchase_gift']");
     private final SelenideElement linkRemoveSingleItem = $x("//div/a[text() = 'Удалить']");
+    private final SelenideElement linkRemoveAllItems = $("[class='remove_ctn']");
     private final SelenideElement cartStatusMessage = $("[class='cart_status_message']");
+    private final SelenideElement cartStatusMessageAfterRemoveAllItems = $("[class='pageheader']");
     private final SelenideElement price = $("[class='price']");
+    private final SelenideElement buttonConfirmRemoveAllItem = $("[class='btn_green_steamui btn_medium']");
 
     public CartPage checkNameGame(String nameGame){
         titleNameGame.shouldHave(Condition.text(nameGame));
@@ -54,8 +57,19 @@ public class CartPage {
         return this;
     }
 
+    public CartPage checkStatusCartRemoveAllItem(String message){
+        cartStatusMessageAfterRemoveAllItems.shouldHave(Condition.text(message));
+        return this;
+    }
+
     public CartPage checkPriceAnEmptyCart(String value){
         price.shouldHave(Condition.text(value));
+        return this;
+    }
+
+    public CartPage removeAllItems(){
+        linkRemoveAllItems.click();
+        buttonConfirmRemoveAllItem.click();
         return this;
     }
 }
