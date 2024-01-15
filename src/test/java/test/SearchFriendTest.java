@@ -16,12 +16,12 @@ import static helpers.Constants.COMMUNITY_URL;
 public class SearchFriendTest extends BaseLocalTest {
     MainPage mainPage = new MainPage();
     CommunityPage communityPage = new CommunityPage();
-    static FakerUtils faker = new FakerUtils();
-    private  final static String LOGIN_FRIEND = faker.getLoginNameFriends();
+    FakerUtils faker = new FakerUtils();
+    private final String LOGIN_FRIEND = faker.getLoginNameFriends();
 
     @Test
     @DisplayName("Поиск друга в Steam")
-    public void searchFriendTest(){
+    public void searchFriendTest() {
 
         mainPage.openPage(COMMUNITY_URL);
         communityPage.searchFriend(LOGIN_FRIEND)

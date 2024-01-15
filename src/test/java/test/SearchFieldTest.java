@@ -16,8 +16,8 @@ import static helpers.Constants.BASE_URL;
 public class SearchFieldTest extends BaseLocalTest {
     MainPage mainPage = new MainPage();
     SearchResultPage searchResultPage = new SearchResultPage();
-    static FakerUtils faker = new FakerUtils();
-    private final static String GAME = faker.getGameName();
+    FakerUtils faker = new FakerUtils();
+    private final String GAME = faker.getGameName();
 
     @Test
     @DisplayName("Проверка поисковой  выдачи в Steam")

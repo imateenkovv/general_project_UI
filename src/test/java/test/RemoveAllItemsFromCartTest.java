@@ -20,9 +20,9 @@ public class RemoveAllItemsFromCartTest extends BaseLocalTest {
     SearchResultPage searchResultPage = new SearchResultPage();
     GamePage gamePage = new GamePage();
     CartPage cartPage = new CartPage();
-    static FakerUtils faker = new FakerUtils();
-    private static final String NAME_GAME_ONE = faker.getGameName();
-    private static final String NAME_GAME_TWO = faker.getGameName();
+    FakerUtils faker = new FakerUtils();
+    private final String NAME_GAME_ONE = faker.getGameName();
+    private final String NAME_GAME_TWO = faker.getGameName();
 
     @Test
     @DisplayName("Удаление сразу всех игр из корзины")

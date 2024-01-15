@@ -21,8 +21,8 @@ public class RemoveItemFromCart extends BaseLocalTest {
     SearchResultPage searchResultPage = new SearchResultPage();
     GamePage gamePage = new GamePage();
     CartPage cartPage = new CartPage();
-    static FakerUtils faker = new FakerUtils();
-    private final static String NAME_GAME = faker.getGameName();
+    FakerUtils faker = new FakerUtils();
+    private final String NAME_GAME = faker.getGameName();
 
 
     @Test
