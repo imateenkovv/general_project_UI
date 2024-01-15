@@ -1,6 +1,6 @@
 package test;
 
-import driver.BaseLocalTest;
+import driver.BaseRemoteTest;
 import io.qameta.allure.Severity;
 import io.qameta.allure.SeverityLevel;
 import org.junit.jupiter.api.DisplayName;
@@ -16,7 +16,7 @@ import static helpers.Constants.BASE_URL;
  * @author mateenkov
  */
 
-public class SearchFieldTest extends BaseLocalTest {
+public class SearchFieldTest extends BaseRemoteTest {
     MainPage mainPage = new MainPage();
     SearchResultPage searchResultPage = new SearchResultPage();
     FakerUtils faker = new FakerUtils();

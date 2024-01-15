@@ -19,7 +19,7 @@ import static helpers.Constants.BASE_URL;
  * @author mateenkov
  */
 
-abstract public class BaseTestRemote {
+abstract public class BaseRemoteTest {
     @BeforeAll
     public static void setUp() {
         String browser = System.getProperty("browser", "chrome");
