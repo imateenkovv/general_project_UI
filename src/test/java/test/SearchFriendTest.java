@@ -2,6 +2,7 @@ package test;
 
 import driver.BaseLocalTest;
 import org.junit.jupiter.api.DisplayName;
+import org.junit.jupiter.api.Tag;
 import org.junit.jupiter.api.Test;
 import pages.CommunityPage;
 import pages.MainPage;
@@ -20,6 +21,7 @@ public class SearchFriendTest extends BaseLocalTest {
     private final String LOGIN_FRIEND = faker.getLoginNameFriends();
 
     @Test
+    @Tag("Web")
     @DisplayName("Поиск друга в Steam")
     public void searchFriendTest() {
 

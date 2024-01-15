@@ -2,6 +2,7 @@ package test;
 
 import driver.BaseLocalTest;
 import org.junit.jupiter.api.DisplayName;
+import org.junit.jupiter.api.Tag;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.CsvSource;
 import pages.GamePage;
@@ -19,6 +20,7 @@ public class CheckDescriptionGameTest extends BaseLocalTest {
     SearchResultPage searchResultPage = new SearchResultPage();
     GamePage gamePage = new GamePage();
     @ParameterizedTest
+    @Tag("Web")
     @DisplayName("Проверка соответствия описания игры")
     @CsvSource(value = {
             FIREWATCH + ", " + FIREWATH_DESCRIPTION,

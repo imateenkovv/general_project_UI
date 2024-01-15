@@ -2,11 +2,12 @@ package driver;
 
 import com.codeborne.selenide.Configuration;
 import com.codeborne.selenide.Selenide;
+import io.qameta.allure.Step;
 import org.junit.jupiter.api.AfterAll;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeAll;
+import utils.Attachments;
 
-import static com.codeborne.selenide.Selenide.closeWebDriver;
 import static helpers.Constants.BASE_URL;
 
 /**
@@ -15,21 +16,27 @@ import static helpers.Constants.BASE_URL;
 
 abstract public class BaseLocalTest {
 
-    @AfterEach
-    public void  clearAfterTest(){
-        Selenide.clearBrowserLocalStorage();
-        Selenide.clearBrowserCookies();
-    }
-
+    @Step("Установка и настройка драйвера")
     @BeforeAll
-    public static void setUp() {
+    public static  void setUp() {
         Configuration.baseUrl = BASE_URL;
+        Configuration.pageLoadStrategy = "eager";
         Configuration.browserSize = "1920x1080";
+
     }
 
+    @AfterEach
+    public void addAttachments(){
+        Attachments.attachScreenshot();
+        Attachments.addVideo();
+    }
+
+    @Step("Очистка и закрытие драйвера")
     @AfterAll
-    public static void tearDown(){
-        closeWebDriver();
+    public static  void tearDown() {
+        Selenide.clearBrowserCookies();
+        Selenide.clearBrowserLocalStorage();
+        Selenide.closeWebDriver();
     }
 
 }

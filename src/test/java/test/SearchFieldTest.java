@@ -2,6 +2,7 @@ package test;
 
 import driver.BaseLocalTest;
 import org.junit.jupiter.api.DisplayName;
+import org.junit.jupiter.api.Tag;
 import org.junit.jupiter.api.Test;
 import pages.MainPage;
 import pages.SearchResultPage;
@@ -20,6 +21,7 @@ public class SearchFieldTest extends BaseLocalTest {
     private final String GAME = faker.getGameName();
 
     @Test
+    @Tag("Web")
     @DisplayName("Проверка поисковой  выдачи в Steam")
     void searchFieldTest() {
         mainPage.openPage(BASE_URL)

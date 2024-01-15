@@ -2,6 +2,7 @@ package test;
 
 import driver.BaseLocalTest;
 import org.junit.jupiter.api.DisplayName;
+import org.junit.jupiter.api.Tag;
 import org.junit.jupiter.api.Test;
 import pages.CartPage;
 import pages.GamePage;
@@ -25,6 +26,7 @@ public class RemoveAllItemsFromCartTest extends BaseLocalTest {
     private final String NAME_GAME_TWO = faker.getGameName();
 
     @Test
+    @Tag("Web")
     @DisplayName("Удаление сразу всех игр из корзины")
     void removeAllItemsFromCartTest() {
 

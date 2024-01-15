@@ -2,6 +2,7 @@ package test;
 
 import driver.BaseLocalTest;
 import org.junit.jupiter.api.DisplayName;
+import org.junit.jupiter.api.Tag;
 import org.junit.jupiter.api.Test;
 import pages.CartPage;
 import pages.GamePage;
@@ -25,6 +26,8 @@ public class AddItemToCartTest extends BaseLocalTest {
     private final String NAME_GAME = faker.getGameName();
 
     @Test
+    @Tag("Web")
+    @Tag("Smoke")
     @DisplayName("Добавление игры в корзину")
     void addItemToCartTest() {
         open(BASE_URL);

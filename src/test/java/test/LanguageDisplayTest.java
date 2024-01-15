@@ -2,6 +2,7 @@ package test;
 
 import driver.BaseLocalTest;
 import org.junit.jupiter.api.DisplayName;
+import org.junit.jupiter.api.Tag;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.CsvSource;
 import pages.MainPage;
@@ -16,6 +17,8 @@ public class LanguageDisplayTest extends BaseLocalTest {
     MainPage mainPage = new MainPage();
 
     @ParameterizedTest
+    @Tag("Web")
+    @Tag("Smoke")
     @DisplayName("Проверка отображения текста при смене языка")
     @CsvSource(value = {
             "Italiano, Installa Steam",
