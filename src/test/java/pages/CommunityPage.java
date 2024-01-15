@@ -14,7 +14,7 @@ public class CommunityPage {
 
     private final SelenideElement inputSearchFriend = $("[id='SearchPlayers']");
     private final SelenideElement personalInfoFoundFriend = $("[class='searchPersonaInfo']");
-    @Step("Найти друга")
+    @Step("Поиск друга")
     public CommunityPage searchFriend(String loginFriend){
         inputSearchFriend.setValue(loginFriend).pressEnter();
         return this;

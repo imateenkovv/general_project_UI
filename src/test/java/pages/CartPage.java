@@ -35,7 +35,7 @@ public class CartPage {
         titleCart.shouldHave(Condition.text(titleCartPage));
         return this;
     }
-    @Step("Проверка отсутствия колличества игр в корзине")
+    @Step("Проверка колличества игр в корзине")
     public CartPage checkCounterItemInCart(String countItemInCart){
         counterItemInCart.shouldHave(Condition.text(countItemInCart));
         return this;

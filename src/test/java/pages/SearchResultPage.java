@@ -15,7 +15,7 @@ public class SearchResultPage {
 
     private final ElementsCollection gameItem = $$("[class='search_result_row ds_collapse_flag  app_impression_tracked']");
 
-    @Step("Открыть найденную игру")
+    @Step("Переход на страницу найденной игры")
     public SearchResultPage openFoundItem(String nameGame) {
         $x("//div/span[text() = '" + nameGame + "']").click();
         return this;

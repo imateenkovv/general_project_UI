@@ -1,6 +1,8 @@
 package test;
 
 import driver.BaseLocalTest;
+import io.qameta.allure.Severity;
+import io.qameta.allure.SeverityLevel;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Tag;
 import org.junit.jupiter.api.Test;
@@ -28,6 +30,7 @@ public class AddItemToCartTest extends BaseLocalTest {
     @Test
     @Tag("Web")
     @Tag("Smoke")
+    @Severity(SeverityLevel.BLOCKER)
     @DisplayName("Добавление игры в корзину")
     void addItemToCartTest() {
         open(BASE_URL);

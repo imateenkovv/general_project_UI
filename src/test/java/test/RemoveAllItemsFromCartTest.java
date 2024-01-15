@@ -1,6 +1,8 @@
 package test;
 
 import driver.BaseLocalTest;
+import io.qameta.allure.Severity;
+import io.qameta.allure.SeverityLevel;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Tag;
 import org.junit.jupiter.api.Test;
@@ -27,6 +29,7 @@ public class RemoveAllItemsFromCartTest extends BaseLocalTest {
 
     @Test
     @Tag("Web")
+    @Severity(SeverityLevel.CRITICAL)
     @DisplayName("Удаление сразу всех игр из корзины")
     void removeAllItemsFromCartTest() {
 

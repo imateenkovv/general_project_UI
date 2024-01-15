@@ -28,12 +28,12 @@ public class MainPage {
         webdriver().shouldHave(url(url));
         return this;
     }
-    @Step("Открыть меню переключения языка")
+    @Step("Открытие меню переключения языка")
     public MainPage openChangeLanguage() {
         changeLanguageButton.click();
         return this;
     }
-    @Step("Задать язык")
+    @Step("Выбор языка")
     public MainPage setLanguage(String language) {
         $x("//a[contains(text(),'" + language + "')]").click();
         return this;
