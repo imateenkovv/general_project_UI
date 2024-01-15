@@ -34,6 +34,7 @@ public class RemoveAllItemsFromCartTest extends BaseRemoteTest {
     void removeAllItemsFromCartTest() {
 
         mainPage.openPage(BASE_URL)
+                .acceptCookies()
                 .searchItem(NAME_GAME_ONE);
         searchResultPage.openFoundItem(NAME_GAME_ONE);
         gamePage.addGameToCart();

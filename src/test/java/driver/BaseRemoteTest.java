@@ -50,12 +50,12 @@ abstract public class BaseRemoteTest {
     public void addAttachments(){
         Attachments.attachScreenshot();
         Attachments.addVideo();
+        Selenide.clearBrowserCookies();
+        Selenide.clearBrowserLocalStorage();
     }
 
     @AfterAll
     public static void tearDown() {
-        Selenide.clearBrowserCookies();
-        Selenide.clearBrowserLocalStorage();
         Selenide.closeWebDriver();
     }
 }

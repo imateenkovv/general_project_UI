@@ -30,6 +30,7 @@ public class LanguageDisplayTest extends BaseRemoteTest {
     })
     void correctLanguageDisplayTest2(String language, String expectedResult) {
         mainPage.openPage(BASE_URL)
+                .acceptCookies()
                 .openChangeLanguage()
                 .setLanguage(language)
                 .checkChangeLanguage(expectedResult);

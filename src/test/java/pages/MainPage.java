@@ -16,10 +16,16 @@ public class MainPage {
     private final SelenideElement inputSearch = $("[type='search']");
     private final SelenideElement changeLanguageButton = $("[id='language_pulldown']");
     private final SelenideElement buttonDownloadSteam = $("[class='header_installsteam_btn_content']");
+    private final SelenideElement buttonAcceptCookies = $("[id='acceptAllButton']");
     @Step("Поиск игры")
     public MainPage searchItem(String value) {
         inputSearch.setValue(value);
         inputSearch.pressEnter();
+        return this;
+    }
+    @Step("Принятие кук")
+    public MainPage acceptCookies(){
+        buttonAcceptCookies.click();
         return this;
     }
     @Step("Открытие страницы")

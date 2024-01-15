@@ -33,9 +33,9 @@ public class AddItemToCartTest extends BaseRemoteTest {
     @Severity(SeverityLevel.BLOCKER)
     @DisplayName("Добавление игры в корзину")
     void addItemToCartTest() {
-        open(BASE_URL);
-
-        mainPage.searchItem(NAME_GAME);
+        mainPage.openPage(BASE_URL)
+                .acceptCookies()
+                .searchItem(NAME_GAME);
         searchResultPage.openFoundItem(NAME_GAME);
         gamePage.checkNameGame(NAME_GAME)
                 .addGameToCart();

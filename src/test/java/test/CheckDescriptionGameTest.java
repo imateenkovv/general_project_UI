@@ -31,6 +31,7 @@ public class CheckDescriptionGameTest extends BaseRemoteTest {
             CS + ", " + CS_DESCRIPTION})
     void checkDescriptionGameTest(String nameGame, String description) {
         mainPage.openPage(BASE_URL)
+                .acceptCookies()
                 .searchItem(nameGame);
         searchResultPage.openFoundItem(nameGame);
         gamePage.checkDescription(description);

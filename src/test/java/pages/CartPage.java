@@ -18,7 +18,7 @@ public class CartPage {
     private final SelenideElement counterItemInCart = $("[id='cart_item_count_value']");
     private final SelenideElement buttonPurchaseSelf = $("[id='btn_purchase_self']");
     private final SelenideElement buttonPurchaseGift = $("[id='btn_purchase_gift']");
-    private final SelenideElement linkRemoveSingleItem = $x("//div/a[text() = 'Удалить']");
+    private final SelenideElement linkRemoveSingleItem = $x("//div/a[text() = 'Remove']");
     private final SelenideElement linkRemoveAllItems = $("[class='remove_ctn']");
     private final SelenideElement cartStatusMessage = $("[class='cart_status_message']");
     private final SelenideElement cartStatusMessageAfterRemoveAllItems = $("[class='pageheader']");

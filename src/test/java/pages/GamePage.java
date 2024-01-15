@@ -14,7 +14,7 @@ import static com.codeborne.selenide.Selenide.$$x;
 
 public class GamePage {
 
-    private final ElementsCollection buttonAddToCart = $$x("//span[text() = 'В корзину']");
+    private final ElementsCollection buttonAddToCart = $$x("//span[text() = 'Add to Cart']");
     private final SelenideElement titleNameGame = $("[id='appHubAppName']");
     private static final SelenideElement descriptionGame = $("[class='game_description_snippet']");
     @Step("Добавление игры в корзину")
