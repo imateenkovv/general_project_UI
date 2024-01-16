@@ -34,7 +34,6 @@ public class AddItemToCartTest extends BaseRemoteTest {
     @DisplayName("Добавление игры в корзину")
     void addItemToCartTest() {
         mainPage.openPage(BASE_URL)
-                .acceptCookies()
                 .searchItem(NAME_GAME);
         searchResultPage.openFoundItem(NAME_GAME);
         gamePage.checkNameGame(NAME_GAME)

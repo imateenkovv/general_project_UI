@@ -1,6 +1,5 @@
 package utils;
 
-import com.codeborne.selenide.Condition;
 import com.github.javafaker.Faker;
 
 import java.util.Locale;
@@ -16,7 +15,7 @@ public class FakerUtils {
     Faker faker = new Faker(Locale.US);
     private static final String[] GAME_NAME_ARG = {
             FIREWATCH,
-            DETROIT,
+            TRUCK,
             CS
     };
 

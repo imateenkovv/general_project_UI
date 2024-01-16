@@ -28,8 +28,7 @@ public class SearchFriendTest extends BaseRemoteTest {
     @Severity(SeverityLevel.CRITICAL)
     public void searchFriendTest() {
 
-        mainPage.openPage(COMMUNITY_URL)
-                .acceptCookies();
+        mainPage.openPage(COMMUNITY_URL);
         communityPage.searchFriend(LOGIN_FRIEND)
                 .checkFoundFriend(LOGIN_FRIEND);
 

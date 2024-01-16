@@ -23,11 +23,6 @@ public class MainPage {
         inputSearch.pressEnter();
         return this;
     }
-    @Step("Принятие кук")
-    public MainPage acceptCookies(){
-        buttonAcceptCookies.click();
-        return this;
-    }
     @Step("Открытие страницы")
     public MainPage openPage(String url) {
         open(url);

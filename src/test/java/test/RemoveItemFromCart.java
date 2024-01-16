@@ -34,9 +34,7 @@ public class RemoveItemFromCart extends BaseRemoteTest {
     @Severity(SeverityLevel.NORMAL)
     @DisplayName("Удаление игры из корзины")
     void removeItemFromCartTest() {
-        open(BASE_URL);
-
-        mainPage.acceptCookies()
+        mainPage.openPage(BASE_URL)
                 .searchItem(NAME_GAME);
         searchResultPage.openFoundItem(NAME_GAME);
         gamePage.addGameToCart();

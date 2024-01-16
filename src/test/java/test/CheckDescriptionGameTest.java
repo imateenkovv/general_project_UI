@@ -27,11 +27,10 @@ public class CheckDescriptionGameTest extends BaseRemoteTest {
     @Severity(SeverityLevel.CRITICAL)
     @CsvSource(value = {
             FIREWATCH + ", " + FIREWATH_DESCRIPTION,
-            DETROIT + ", " + DETROIT_DESCRIPTION,
+            TRUCK + ", " + TRUCK_DESCRIPTION,
             CS + ", " + CS_DESCRIPTION})
     void checkDescriptionGameTest(String nameGame, String description) {
         mainPage.openPage(BASE_URL)
-                .acceptCookies()
                 .searchItem(nameGame);
         searchResultPage.openFoundItem(nameGame);
         gamePage.checkDescription(description);

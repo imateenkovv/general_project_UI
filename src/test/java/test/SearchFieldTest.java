@@ -28,7 +28,6 @@ public class SearchFieldTest extends BaseRemoteTest {
     @DisplayName("Проверка поисковой  выдачи в Steam")
     void searchFieldTest() {
         mainPage.openPage(BASE_URL)
-                .acceptCookies()
                 .searchItem(GAME);
         searchResultPage.checkSearchResult(GAME);
     }
