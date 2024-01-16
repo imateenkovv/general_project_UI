@@ -22,7 +22,7 @@ public class SearchResultPage {
     }
     @Step("Проверка результата поиска игры")
     public SearchResultPage checkSearchResult(String nameGame){
-        gameItem.first().shouldHave(Condition.text(nameGame));
+        gameItem.filterBy(Condition.visible).first().shouldHave(Condition.text(nameGame));
         return this;
     }
 
