@@ -96,4 +96,4 @@ gradle clean test
 
 Запись экрана авто-теста - ```Добавление игры в корзину``` 
 
-![](addItemToCart.mp4)
+[addItemToCart.mp4](video%2FaddItemToCart.mp4)![](addItemToCart.mp4)
