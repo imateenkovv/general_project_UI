@@ -13,7 +13,7 @@ import static com.codeborne.selenide.Selenide.$x;
 
 public class SearchResultPage {
 
-    private final ElementsCollection gameItem = $$("[class='search_result_row ds_collapse_flag  app_impression_tracked']");
+    private final ElementsCollection gameItem = $$("[class='responsive_search_name_combined']");
 
     @Step("Переход на страницу найденной игры")
     public SearchResultPage openFoundItem(String nameGame) {
