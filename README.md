@@ -93,7 +93,7 @@ gradle clean test
 ### Отчет о выполнении тестов в Telegram с использованием бота:
 **Оповещения о результатах сборки проекта:**
 
-![img.png](picturies/telegram.png)
+![img.png](picturies/telegramReporting.png)
 
 ### Пример запуска авто-теста в Selenoid
 
