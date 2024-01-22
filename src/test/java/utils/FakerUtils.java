@@ -4,9 +4,6 @@ import com.github.javafaker.Faker;
 
 import java.util.Locale;
 
-import static com.codeborne.selenide.Selenide.$;
-import static helpers.Constants.*;
-
 /**
  * @author mateenkov
  */
