@@ -36,6 +36,7 @@ dependencies {
             'com.codeborne:selenide:6.16.0',
             'org.junit.jupiter:junit-jupiter:5.7.1',
             'com.github.javafaker:javafaker:1.0.2',
+            'org.aeonbits.owner:owner:1.0.12',
             'io.qameta.allure:allure-selenide:2.19.0')
 
     testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.9.2'
@@ -68,5 +69,6 @@ task Web(type: Test) {
 }
 
 test {
+    useJUnitPlatform()
     systemProperties(System.getProperties())
 }

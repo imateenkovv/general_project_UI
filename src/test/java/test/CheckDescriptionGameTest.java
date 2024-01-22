@@ -1,6 +1,6 @@
 package test;
 
-import driver.BaseRemoteTest;
+import driver.BaseTest;
 import io.qameta.allure.Severity;
 import io.qameta.allure.SeverityLevel;
 import org.junit.jupiter.api.DisplayName;
@@ -17,7 +17,7 @@ import static helpers.Constants.*;
  * @author mateenkov
  */
 
-public class CheckDescriptionGameTest extends BaseRemoteTest {
+public class CheckDescriptionGameTest extends BaseTest {
     MainPage mainPage = new MainPage();
     SearchResultPage searchResultPage = new SearchResultPage();
     GamePage gamePage = new GamePage();

@@ -1,6 +1,6 @@
 package test;
 
-import driver.BaseRemoteTest;
+import driver.BaseTest;
 import io.qameta.allure.Severity;
 import io.qameta.allure.SeverityLevel;
 import org.junit.jupiter.api.DisplayName;
@@ -15,7 +15,7 @@ import static helpers.Constants.BASE_URL;
  * @author mateenkov
  */
 
-public class LanguageDisplayTest extends BaseRemoteTest {
+public class LanguageDisplayTest extends BaseTest {
     MainPage mainPage = new MainPage();
 
     @ParameterizedTest

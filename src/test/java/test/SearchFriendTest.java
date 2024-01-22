@@ -1,6 +1,6 @@
 package test;
 
-import driver.BaseRemoteTest;
+import driver.BaseTest;
 import io.qameta.allure.Severity;
 import io.qameta.allure.SeverityLevel;
 import org.junit.jupiter.api.DisplayName;
@@ -16,7 +16,7 @@ import static helpers.Constants.COMMUNITY_URL;
  * @author mateenkov
  */
 
-public class SearchFriendTest extends BaseRemoteTest {
+public class SearchFriendTest extends BaseTest {
     MainPage mainPage = new MainPage();
     CommunityPage communityPage = new CommunityPage();
     FakerUtils faker = new FakerUtils();
