@@ -1,6 +1,5 @@
 package test;
 
-import driver.BaseTest;
 import io.qameta.allure.Severity;
 import io.qameta.allure.SeverityLevel;
 import org.junit.jupiter.api.DisplayName;
@@ -33,7 +32,7 @@ public class RemoveAllItemsFromCartTest extends BaseTest {
     @DisplayName("Удаление сразу всех игр из корзины")
     void removeAllItemsFromCartTest() {
 
-        mainPage.openPage(BASE_URL)
+        mainPage.openPage()
                 .searchItem(NAME_GAME_ONE);
         searchResultPage.openFoundItem(NAME_GAME_ONE);
         gamePage.addGameToCart();

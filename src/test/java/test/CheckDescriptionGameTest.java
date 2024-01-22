@@ -1,6 +1,5 @@
 package test;
 
-import driver.BaseTest;
 import io.qameta.allure.Severity;
 import io.qameta.allure.SeverityLevel;
 import org.junit.jupiter.api.DisplayName;
@@ -30,7 +29,7 @@ public class CheckDescriptionGameTest extends BaseTest {
             TRUCK + ", " + TRUCK_DESCRIPTION,
             CS + ", " + CS_DESCRIPTION})
     void checkDescriptionGameTest(String nameGame, String description) {
-        mainPage.openPage(BASE_URL)
+        mainPage.openPage()
                 .searchItem(nameGame);
         searchResultPage.openFoundItem(nameGame);
         gamePage.checkDescription(description);

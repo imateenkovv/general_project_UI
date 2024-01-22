@@ -1,6 +1,5 @@
 package test;
 
-import driver.BaseTest;
 import io.qameta.allure.Severity;
 import io.qameta.allure.SeverityLevel;
 import org.junit.jupiter.api.DisplayName;
@@ -9,8 +8,6 @@ import org.junit.jupiter.api.Test;
 import pages.MainPage;
 import pages.SearchResultPage;
 import utils.FakerUtils;
-
-import static helpers.Constants.BASE_URL;
 
 /**
  * @author mateenkov
@@ -27,7 +24,7 @@ public class SearchFieldTest extends BaseTest {
     @Severity(SeverityLevel.CRITICAL)
     @DisplayName("Проверка поисковой  выдачи в Steam")
     void searchFieldTest() {
-        mainPage.openPage(BASE_URL)
+        mainPage.openPage()
                 .searchItem(GAME);
         searchResultPage.checkSearchResult(GAME);
     }

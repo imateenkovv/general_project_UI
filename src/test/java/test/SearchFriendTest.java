@@ -1,6 +1,5 @@
 package test;
 
-import driver.BaseTest;
 import io.qameta.allure.Severity;
 import io.qameta.allure.SeverityLevel;
 import org.junit.jupiter.api.DisplayName;
@@ -27,11 +26,8 @@ public class SearchFriendTest extends BaseTest {
     @DisplayName("Поиск друга в Steam")
     @Severity(SeverityLevel.CRITICAL)
     public void searchFriendTest() {
-
-        mainPage.openPage(COMMUNITY_URL);
-        communityPage.searchFriend(LOGIN_FRIEND)
+        communityPage.openPage()
+                .searchFriend(LOGIN_FRIEND)
                 .checkFoundFriend(LOGIN_FRIEND);
-
     }
-
 }

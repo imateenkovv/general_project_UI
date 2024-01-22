@@ -1,6 +1,5 @@
 package test;
 
-import driver.BaseTest;
 import io.qameta.allure.Severity;
 import io.qameta.allure.SeverityLevel;
 import org.junit.jupiter.api.DisplayName;
@@ -33,7 +32,7 @@ public class AddItemToCartTest extends BaseTest {
     @Severity(SeverityLevel.BLOCKER)
     @DisplayName("Добавление игры в корзину")
     void addItemToCartTest() {
-        mainPage.openPage(BASE_URL)
+        mainPage.openPage()
                 .searchItem(NAME_GAME);
         searchResultPage.openFoundItem(NAME_GAME);
         gamePage.checkNameGame(NAME_GAME)

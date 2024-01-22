@@ -24,9 +24,8 @@ public class MainPage {
         return this;
     }
     @Step("Открытие страницы")
-    public MainPage openPage(String url) {
-        open(url);
-        webdriver().shouldHave(url(url));
+    public MainPage openPage() {
+        open("https://store.steampowered.com/");
         return this;
     }
     @Step("Открытие меню переключения языка")
