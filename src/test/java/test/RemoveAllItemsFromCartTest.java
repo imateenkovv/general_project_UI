@@ -11,8 +11,6 @@ import pages.MainPage;
 import pages.SearchResultPage;
 import utils.FakerUtils;
 
-import static helpers.Constants.*;
-
 /**
  * @author mateenkov
  */
@@ -25,6 +23,8 @@ public class RemoveAllItemsFromCartTest extends BaseTest {
     FakerUtils faker = new FakerUtils();
     private final String NAME_GAME_ONE = faker.getGameName();
     private final String NAME_GAME_TWO = faker.getGameName();
+    private static final String TITLE_PLACEHOLDER_CART = "YOUR SHOPPING CART";
+    private static final String AMOUNT_EMPTY_CART = "0";
 
     @Test
     @Tag("Web")

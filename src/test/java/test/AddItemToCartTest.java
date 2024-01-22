@@ -11,9 +11,6 @@ import pages.MainPage;
 import pages.SearchResultPage;
 import utils.FakerUtils;
 
-import static com.codeborne.selenide.Selenide.open;
-import static helpers.Constants.*;
-
 /**
  * @author mateenkov
  */
@@ -25,6 +22,8 @@ public class AddItemToCartTest extends BaseTest {
     CartPage cartPage = new CartPage();
     FakerUtils faker = new FakerUtils();
     private final String NAME_GAME = faker.getGameName();
+    private static final String TITLE_PLACEHOLDER_CART = "YOUR SHOPPING CART";
+    private static final String COUNT_ONE_IN_CART = "1";
 
     @Test
     @Tag("Web")

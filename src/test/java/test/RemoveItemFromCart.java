@@ -11,8 +11,6 @@ import pages.MainPage;
 import pages.SearchResultPage;
 import utils.FakerUtils;
 
-import static helpers.Constants.*;
-
 /**
  * @author mateenkov
  */
@@ -24,6 +22,8 @@ public class RemoveItemFromCart extends BaseTest {
     CartPage cartPage = new CartPage();
     FakerUtils faker = new FakerUtils();
     private final String NAME_GAME = faker.getGameName();
+    private static final String AMOUNT_EMPTY_CART = "0";
+    private static final String MESSAGE_REMOVE_SINGLE_ITEM = "Your item has been removed!";
 
     @Test
     @Tag("Web")

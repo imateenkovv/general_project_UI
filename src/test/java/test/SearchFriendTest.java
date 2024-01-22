@@ -9,8 +9,6 @@ import pages.CommunityPage;
 import pages.MainPage;
 import utils.FakerUtils;
 
-import static helpers.Constants.COMMUNITY_URL;
-
 /**
  * @author mateenkov
  */
