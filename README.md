@@ -52,7 +52,6 @@ gradle clean test
 -DbrowserVersion=${browserVersion}
 -DbrowserSize=${browserSize}
 -DremoteUrl=${remoteUrl}
--DremoteUrl=${TASK}
 ```
 
 ### Параметры запуска тестов:
