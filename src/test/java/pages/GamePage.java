@@ -16,7 +16,7 @@ public class GamePage {
 
     private final ElementsCollection buttonAddToCart = $$x("//span[text() = 'Add to Cart']");
     private final SelenideElement titleNameGame = $("[id='appHubAppName']");
-    private static final SelenideElement descriptionGame = $("[class='game_description_snippet']");
+    private final SelenideElement descriptionGame = $("[class='game_description_snippet']");
     @Step("Добавление игры в корзину")
     public GamePage addGameToCart(){
         buttonAddToCart.first().click();
