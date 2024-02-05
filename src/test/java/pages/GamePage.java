@@ -17,18 +17,21 @@ public class GamePage {
     private final ElementsCollection buttonAddToCart = $$x("//span[text() = 'Add to Cart']");
     private final SelenideElement titleNameGame = $("[id='appHubAppName']");
     private final SelenideElement descriptionGame = $("[class='game_description_snippet']");
+
     @Step("Добавление игры в корзину")
-    public GamePage addGameToCart(){
+    public GamePage addGameToCart() {
         buttonAddToCart.first().click();
         return this;
     }
+
     @Step("Проверка названия игры")
-    public GamePage checkNameGame(String nameGame){
+    public GamePage checkNameGame(String nameGame) {
         titleNameGame.shouldHave(Condition.text(nameGame));
         return this;
     }
+
     @Step("Проверка описания игры")
-    public GamePage checkDescription(String description){
+    public GamePage checkDescription(String description) {
         descriptionGame.shouldHave(Condition.text(description));
         return this;
     }

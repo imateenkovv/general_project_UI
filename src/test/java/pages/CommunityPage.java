@@ -14,8 +14,9 @@ public class CommunityPage {
 
     private final SelenideElement inputSearchFriend = $("[id='SearchPlayers']");
     private final SelenideElement personalInfoFoundFriend = $("[class='searchPersonaInfo']");
+
     @Step("Поиск друга")
-    public CommunityPage searchFriend(String loginFriend){
+    public CommunityPage searchFriend(String loginFriend) {
         inputSearchFriend.setValue(loginFriend).pressEnter();
         return this;
     }
@@ -25,8 +26,9 @@ public class CommunityPage {
         open("https://steamcommunity.com/");
         return this;
     }
+
     @Step("Проверка результата поиска друга")
-    public CommunityPage checkFoundFriend(String loginFriend){
+    public CommunityPage checkFoundFriend(String loginFriend) {
         personalInfoFoundFriend.shouldHave(Condition.text(loginFriend));
         return this;
     }

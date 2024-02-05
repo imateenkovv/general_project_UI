@@ -20,8 +20,9 @@ public class SearchResultPage {
         $x("//div/span[text() = '" + nameGame + "']").click();
         return this;
     }
+
     @Step("Проверка результата поиска игры")
-    public SearchResultPage checkSearchResult(String nameGame){
+    public SearchResultPage checkSearchResult(String nameGame) {
         gameItem.filterBy(Condition.visible).first().shouldHave(Condition.text(nameGame));
         return this;
     }

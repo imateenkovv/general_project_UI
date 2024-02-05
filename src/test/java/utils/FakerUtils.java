@@ -10,7 +10,7 @@ import java.util.Locale;
 
 public class FakerUtils {
     Faker faker = new Faker(Locale.US);
-    private  static final String FIREWATCH = "Firewatch";
+    private static final String FIREWATCH = "Firewatch";
     private static final String TRUCK = "Euro Truck Simulator 2";
     private static final String CS = "Counter-Strike: Source";
     private static final String[] GAME_NAME_ARG = {
